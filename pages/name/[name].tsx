@@ -56,14 +56,19 @@ const PokemonByNamePage: NextPage<Props> = ({ pokemon }) => {
             <Card.Header
               css={{ display: 'flex', justifyContent: 'space-between' }}
             >
-              <Text h1>{pokemon.name}</Text>
-              <Button
-                color='gradient'
-                ghost={!isInFavorites}
-                onClick={onToggleFavorite}
+              <Container
+                css={{ display: 'flex', justifyContent: 'space-between' }}
+                gap={0}
               >
-                {isInFavorites ? 'En Favoritos' : 'Guardar en favoritos'}
-              </Button>
+                <Text h1>{pokemon.name}</Text>
+                <Button
+                  color='gradient'
+                  ghost={!isInFavorites}
+                  onClick={onToggleFavorite}
+                >
+                  {isInFavorites ? 'En Favoritos' : 'Guardar en favoritos'}
+                </Button>
+              </Container>
             </Card.Header>
             <Card.Body>
               <Text size={30}>Sprites</Text>
